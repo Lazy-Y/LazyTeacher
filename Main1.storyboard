@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GSi-9D-Dw3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Kmj-v7-fbM">
+            <objects>
+                <navigationController storyboardIdentifier="first" id="GSi-9D-Dw3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZA-d8-hDr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="yaR-TX-6ku"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sl3-bY-DPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="315"/>
+        </scene>
+        <!--我的好友-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="second" id="vXZ-lx-hvc" customClass="contact" customModule="LazyTeacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ih2-Cb-KaX">
+                                <rect key="frame" x="0.0" y="-35" width="600" height="635"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="u8M-ee-J5G">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-hI-beH">
+                                            <rect key="frame" x="0.0" y="79" width="600" height="1"/>
+                                            <color key="backgroundColor" red="0.79887736336629189" green="0.79890673366704379" blue="0.80116824682493848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="n1a-LF-ECt"/>
+                                            </constraints>
+                                        </view>
+                                        <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9VO-HM-ehC">
+                                            <rect key="frame" x="0.0" y="36" width="600" height="44"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ZhR-hI-beH" secondAttribute="bottom" id="OLG-vC-Rvf"/>
+                                        <constraint firstItem="ZhR-hI-beH" firstAttribute="leading" secondItem="u8M-ee-J5G" secondAttribute="leading" id="Z4j-SM-Def"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZhR-hI-beH" secondAttribute="trailing" id="h39-I7-SjW"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.94117647058823528" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ih2-Cb-KaX" secondAttribute="bottom" id="6ih-5b-bgH"/>
+                            <constraint firstItem="Ih2-Cb-KaX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="-35" id="EJY-zU-H1P"/>
+                            <constraint firstItem="Ih2-Cb-KaX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MUe-73-oMh"/>
+                            <constraint firstAttribute="trailing" secondItem="Ih2-Cb-KaX" secondAttribute="trailing" id="wVC-XJ-Csk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的好友" id="2s5-FB-jSb">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="8VI-et-8Z8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="HKq-e1-b97"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Ih2-Cb-KaX" id="ifW-vs-7ma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389" y="315"/>
+        </scene>
+    </scenes>
+</document>
